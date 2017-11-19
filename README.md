@@ -21,3 +21,5 @@ libraryDependencies ++= Seq(
 The library compositions are defined here:
 
 https://github.com/scalavision/sbtLibby/blob/8c6b4f7548a4fa42f48ccc4cdc33b8d1cb50e23e/src/main/scala/sbtlibby/SbtLibby.scala#L149
+
+Feel free to update or enhance the library compositions in PR's
