@@ -119,7 +119,7 @@ object SbtLibby extends AutoPlugin {
 
   override lazy val projectSettings = Seq(
     liftWebPgDeps := LiftWebSettings.dependencies,
-    testDependencies := TestSettings.dependencies,
+    testDeps := TestSettings.dependencies,
     typeLevelDeps := TypeLevel.dependencies,
     metaDeps := MetaProgramming.dependencies,
     scalaMetaDeps := ScalaMeta.dependencies,
@@ -148,7 +148,7 @@ object SbtLibby extends AutoPlugin {
 
   object autoImport {
     val liftWebPgDeps = settingKey[Seq[ModuleID]]("Basic dependency stack for a Lift Web project")
-    val testDependencies = settingKey[Seq[ModuleID]]("Basic dependency stack for JVM Testing")
+    val testDeps = settingKey[Seq[ModuleID]]("Basic dependency stack for JVM Testing")
     val typeLevelDeps = settingKey[Seq[ModuleID]]("Basics needed to do typelevel programming")
     val metaDeps = settingKey[Seq[ModuleID]]("Basics needed to do meta programming - without scalameta itself")
     val scalaMetaDeps = settingKey[Seq[ModuleID]]("ScalaMeta Dependency")
