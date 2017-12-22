@@ -59,7 +59,7 @@ object SbtLibby extends AutoPlugin {
     lazy val fs2Core: ModuleID = "co.fs2" %% "fs2-core" % fs2CoreVersion
     lazy val fs2IOVersion = "0.10.0-M8"
     lazy val fs2IO: ModuleID = "co.fs2" %% "fs2-io" % fs2IOVersion
-    lazy val fs2Http: ModuleID = "com.spinoco" %% "fs2-http" % "0.2.0-SNAPSHOT"
+    lazy val fs2Http: ModuleID = "com.spinoco" %% "fs2-http" % "0.3.0-SNAPSHOT"
     val dependencies: Seq[ModuleID] = Seq(scalactic, shapeless, cats, fs2Core, fs2IO, fs2Http)
   }
 
