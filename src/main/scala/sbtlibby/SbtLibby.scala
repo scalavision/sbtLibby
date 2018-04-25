@@ -31,9 +31,9 @@ object SbtLibby extends AutoPlugin {
   object MetaProgramming {
     lazy val sourceCodeVersion = "0.1.3"
     lazy val sourceCode: ModuleID = "com.lihaoyi" %% "sourcecode" % sourceCodeVersion
-    lazy val scalaFmtVersion = "1.0.0-RC2"
+    lazy val scalaFmtVersion = "1.4.0"
     lazy val scalaFmt: ModuleID = "com.geirsson" %% "scalafmt-core" % scalaFmtVersion
-    lazy val fastParseVersion = "0.4.2" 
+    lazy val fastParseVersion = "1.0.0" 
     lazy val fastParse: ModuleID = "com.lihaoyi" %% "fastparse" % fastParseVersion
     lazy val guavaVersion = "22.0"
     lazy val guava: ModuleID = "com.google.guava" % "guava" % guavaVersion
@@ -43,34 +43,34 @@ object SbtLibby extends AutoPlugin {
   }
 
   object IODefault {
-    lazy val betterFilesVersion = "3.0.0"
+    lazy val betterFilesVersion = "3.4.0"
     lazy val betterFiles = "com.github.pathikrit" %% "better-files" % betterFilesVersion
     val dependencies: Seq[ModuleID] = Seq(betterFiles)
   }
 
   object TypeLevel {
-    lazy val scalacticVersion =  "3.0.1"
+    lazy val scalacticVersion =  "3.0.5"
     lazy val scalactic = "org.scalactic" %% "scalactic" % scalacticVersion
-    lazy val shapelessVersion = "2.3.2"
+    lazy val shapelessVersion = "2.3.3"
     lazy val shapeless = "com.chuusai" %% "shapeless" % shapelessVersion
-    lazy val catsVersion = "1.0.0-MF"
+    lazy val catsVersion = "1.1.0"
     lazy val cats: ModuleID = "org.typelevel" %% "cats-core" % catsVersion
-    lazy val fs2CoreVersion = "0.10.0-M8"
+    lazy val fs2CoreVersion = "0.10.3"
     lazy val fs2Core: ModuleID = "co.fs2" %% "fs2-core" % fs2CoreVersion
-    lazy val fs2IOVersion = "0.10.0-M8"
+    lazy val fs2IOVersion = "0.10.3"
     lazy val fs2IO: ModuleID = "co.fs2" %% "fs2-io" % fs2IOVersion
-    lazy val fs2Http: ModuleID = "com.spinoco" %% "fs2-http" % "0.3.0-SNAPSHOT"
+    lazy val fs2Http: ModuleID = "com.spinoco" %% "fs2-http" % "0.3.0"
     val dependencies: Seq[ModuleID] = Seq(scalactic, shapeless, cats, fs2Core, fs2IO, fs2Http)
   }
 
   object TestSettings {
     // Specs
-    lazy val specs2Version = "3.9.0"
+    lazy val specs2Version = "4.0.2"
     lazy val specs2 : Seq[ModuleID] = Seq("org.specs2" %% "specs2-core" % specs2Version % "test")
     lazy val scalaCheckVersion =  "test"
     lazy val scalaCheck : Seq[ModuleID] = Seq("org.scalacheck" %% "scalacheck" % "1.13.5" % scalaCheckVersion)
-    lazy val scalaTestVersion = "3.0.3" 
-    lazy val scalaTest: Seq[ModuleID] = Seq("org.scalatest" %% "scalatest" % "3.0.1" % "test")
+    lazy val scalaTestVersion = "3.0.5" 
+    lazy val scalaTest: Seq[ModuleID] = Seq("org.scalatest" %% "scalatest" % "3.0.5" % "test")
     val dependencies: Seq[ModuleID] = specs2 ++ scalaCheck ++ scalaTest
   }
 
@@ -93,7 +93,7 @@ object SbtLibby extends AutoPlugin {
   object LiftWebSettings {
     import UtilSettings._
     // Lift
-    lazy val liftVersion = "3.0.1"
+    lazy val liftVersion = "3.2.0"
     lazy val liftExtras = "1.0.1"
     lazy val lift : Seq[ModuleID] = Seq(
       "net.liftmodules"   %% "lift-jquery-module_3.0"                  % "2.10",
